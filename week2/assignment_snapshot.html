@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Assignment for Week 2: Amazon EC2 instance creation</title>
+  </head>
+
+  <body>
+    <h1>Assignment for Week 2: Amazon EC2 instance creation</h1>
+
+    <h2>Description</h2>
+
+    <p>In this assignment your team will create a few Amazon EC2 virtual
+    machine instances you'll be using for the rest of the course.
+    You'll also explore some of the basic properties of an instance.
+
+    <h2>What you need to do</h2>
+
+    <ol>
+
+    <li>Create a key pair for yourself in the EC2 console under "Key
+    Pairs", giving it a name clearly related to your AWS login name.
+    Click the "Create Key Pair" button and save the resulting key
+    pair.  <em>Be careful with this file!</em>  Do not place it anywhere
+    where other people can access it.  For added protection, encrypt the
+    private key with a password using "ssh-keygen -p" or the equivalent.
+    See <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon
+    EC2 Key Pairs</a> for more details on how to create and manage a
+    personal key pair.
+
+    <li>Launch three EC2 instances.  Each team member needs to launch at
+    least one instance.  Use these properties for your instances:
+
+      <ul>
+
+      <li>Select the "US West (Oregon)" region in AWS, which is needed
+      for some of the other things below to be visible.  The region menu
+      is at the upper right of the console page, between your
+      "user@uo-cis-sysadm-class" menu and the "Support" menu.
+
+      <li>Choose AMI: Use one of the "free tier" Linux machine images.
+      One of the Ubuntu types is recommended but Red Hat and SUSE Linux
+      are also available.
+
+      <li>Choose Instance Type: t2.nano
+
+      <li>Configure Instance Details:
+
+        <ul>
+
+	<li>Network: lab-cloud
+
+	<li>Subnet: choose your team's subnet
+
+	</ul>
+      <li>Configure Security Group: Select an existing security group,
+      then select "default (default VPC security group)"
+
+      <li>Once you have selected all of these, you can finally launch
+      the instance.  Make sure to choose your own key pair for access
+      and not somebody else's.
+
+      </ul>
+
+    <li>Obtain your own public key by logging in to your instance and
+    getting the contents of the file .ssh/authorized_keys.  Add access
+    for your other team members by adding lines to .ssh/authorized_keys
+    containing their public keys.  You should be careful with this since
+    you could lock yourself out of your instance if you damage that
+    file.  A recommended process:
+
+      <ol>
+
+      <li>Log in to the session and back up the authorized_keys
+      file: <tt>cp .ssh/authorized_keys authorized_keys_backup</tt>
+
+      <li>Edit the .ssh/authorized keys file to add a public key line from
+      another team member.  Make sure your editor doesn't wrap words or
+      lines.
+
+      <li>You and your team member should try to initiate separate
+      logins to the instance to be sure you can both get in.
+
+      <li>If you're not able to get in, use your existing login session
+      to restore your backup: <tt>cp authorized_keys_backup
+      .ssh/authorized_keys</tt>.
+      </ol>
+
+    </ol>
+
+    <h2>What to turn in</h2>
+
+    <p>Create a subdirectory in your team git repository with the name
+    "week2" and create files containing your handin materials under
+    that.
+
+    <ol>
+    
+    <li>List the EC2 instance IDs and private IP addresses of all the
+    instances you created.
+
+    <li>Describe how you find the public IP address of a given instance
+    using the EC2 console.  (The public IP address may change whenever
+    an instance is stopped and restarted.)
+
+    <li>Provide the output of a command showing how much disk space one
+    of your instances has.
+
+    <li>Provide the output of a command showing how much memory one of
+    your instances has.
+
+    <li>Provide a listing showing all the processes running in one of
+    your instances.
+
+    <li>Provide the output of a command showing the network interface
+    configuration of your instance (this should show its private IP
+    address).
+
+    <li>Provide the output of a command showing the routing table of
+    your instance.
+
+    <li>Provide the output of a command showing all of the open network
+    connections and ports on one of your instances.
+
+    <li>Provide a listing of all of the software packages installed on
+    one your instances.
+
+    <li>Provide transcripts showing the output of the commands you use
+    to update your package database and upgrade packages on each of your
+    instances.
+    
+    </ol>
+
+    <p>Material for all of the above should be checked into your team
+    git repository by class time on Monday, July 10.
+
+    <h2>Class presentation/discussion</h2>
+    <p>On Monday, July 10 we will take some time in class to have everyone
+    speak briefly about their experience with this assignment.
+
+    <h2>Evaluation</h2>
+
+    <p>Each item under "What to turn in" is worth one point.
+
+    <hr>
+    <address><a href="mailto:stevev@cs.uoregon.edu">Steve VanDevender</a></address>
+<!-- Created: Sun Jun 25 17:21:34 PDT 2000 -->
+  </body>
+</html>
+
+

@@ -1,0 +1,4 @@
+subnet	EC2 instance ID	private IP address
+a	i-0774a53a0b0e9d2d6	172.31.24.101
+b	i-0d02c3c7e5796fc78	172.31.18.6
+c	i-02ba1914982d78f06	172.31.9.18

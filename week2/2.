@@ -1,0 +1,16 @@
+# Describe how you find the public IP address of a given instance using the EC2 console. (The public IP address may change whenever an instance is stopped and restarted.)
+
+- Login to AWS.
+- From the menubar, select "Services".
+- Either search for "EC2" in the search bar, or select "EC2" from the "Compute" section.
+- Find the menubar along the left-hand side of the page, expanding it if needed.
+- Find the "INSTANCES" section of that menubar on the left, expanding it if needed.
+- Click the "Instances" link, listed in the "INSTANCES" section of the menubar on the left-hand side of the page.
+- Look for a table of instances, one per row. 
+- Notice which row contains cell-values related to the instance in question.
+- Optionally, select the checkbox to the left to the instance whose public IP address(es) you seek. Its row will then become highlighted in blue.
+- Look for the column-heading indicating the public IP address, currently labelled "IPv4 Public IP" for the IPv4 addressing standard, and "IPv6 IPs" for any IP addresses in the IPv6 format.
+- Scanning down the appropriate address column, look for that column's intersection with the selected instance row.
+- The value of that cell, whose row is associated with the virtual machine instance in question, and whose column lists IPv4 or IPv6 addresses, contains the relevant IPv4 or IPv6 address(es), respectively, of that instance.
+
+
