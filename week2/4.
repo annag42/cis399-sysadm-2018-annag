@@ -1,0 +1,6 @@
+Provide the output of a command showing how much memory one of your instances has.
+
+ubuntu@ip-172-31-18-6:~/.ssh$ free -h
+              total        used        free      shared  buff/cache   available
+Mem:           486M         44M         60M        2.3M        382M        405M
+Swap:            0B          0B          0B
